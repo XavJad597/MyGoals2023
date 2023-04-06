@@ -1,5 +1,5 @@
 // Create a close button and append it to each item
-var myNodelist = document.getElementsByClassName('ul');
+var myNodelist = document.getElementsByTagName("LI");
 var i ;
 for (i = 0; i < myNodelist.length; i++) {
     var span = document.createElement("SPAN");
@@ -51,7 +51,10 @@ function newElement() {
     span.appendChild(txt);
     li.appendChild(span);
 
-    
+    span.onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
 }
 
 
